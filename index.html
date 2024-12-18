@@ -75,6 +75,19 @@
             margin-top: 30px;
         }
 
+        .lang-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lang-selector select {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
         /* Mobile Responsiveness */
         @media screen and (max-width: 768px) {
             .container {
@@ -99,6 +112,16 @@
 <body>
 
     <div class="container">
+
+        <!-- Language Selector -->
+        <div class="lang-selector">
+            <label for="languageSelect"><strong>Select Language:</strong></label>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="auto">Auto Detect</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
 
         <!-- English Content -->
         <div id="englishContent" class="hidden">
@@ -148,8 +171,7 @@
                     <h2>8. Contact Us</h2>
                     <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
                     <ul>
-                        <li><strong>Email:</strong> [Insert Your Contact Email]</li>
-                        <li><strong>Website:</strong> [Insert Your Website URL (if applicable)]</li>
+                        <li><strong>Email:</strong> fundevstudio.01@gmail.com</li>
                     </ul>
                 </section>
             </div>
@@ -203,8 +225,7 @@
                     <h2>8. 联系我们</h2>
                     <p>如果您对本隐私政策有任何问题或疑虑，请通过以下方式联系我们：</p>
                     <ul>
-                        <li><strong>电子邮件：</strong> [Insert Your Contact Email]</li>
-                        <li><strong>网站：</strong> [Insert Your Website URL (if applicable)]</li>
+                        <li><strong>电子邮件：</strong> fundevstudio.01@gmail.com</li>
                     </ul>
                 </section>
             </div>
@@ -233,11 +254,11 @@
 
         // Detect user's language and show the appropriate content
         var userLang = navigator.language || navigator.userLanguage;
-        if (userLang.includes("zh")) {
-            document.getElementById("chineseContent").classList.remove("hidden");
-        } else {
-            document.getElementById("englishContent").classList.remove("hidden");
-        }
-    </script>
-</body>
-</html>
+
+        // Function to switch language based on selection
+        function changeLanguage() {
+            var selectedLang = document.getElementById("languageSelect").value;
+            if (selectedLang === "zh") {
+                document.getElementById("chineseContent").classList.remove("hidden");
+                document.getElementById("englishContent").classList.add("hidden");
+            } else if (selectedLang === "en") {
