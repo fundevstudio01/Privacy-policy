@@ -7,125 +7,237 @@
     <title>Privacy Policy</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
         h1 {
             text-align: center;
+            font-size: 28px;
             color: #4CAF50;
+            margin-bottom: 20px;
         }
-        section {
-            margin: 20px;
+
+        h2 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        p, ul {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .privacy-section {
+            margin-top: 20px;
+        }
+
+        .content-wrapper {
+            margin-top: 30px;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p, ul {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- English Content -->
-    <div lang="en">
-        <h1>Privacy Policy</h1>
-        <p><strong>Last Updated:</strong>18/12/2024</p>
+    <div class="container">
 
-        <section>
-            <h2>1. Information We Collect</h2>
-            <p>We do not collect, store, or process any personal information from our users.</p>
-        </section>
+        <!-- English Content -->
+        <div id="englishContent" class="hidden">
+            <h1>Privacy Policy</h1>
+            <p><strong>Last Updated:</strong> <span id="currentDate"></span></p>
 
-        <section>
-            <h2>2. Permissions</h2>
-            <p>Our app requires the following permission:</p>
-            <ul>
-                <li><strong>Internet:</strong> This permission is used solely to access external resources, such as loading live content from an API. No personal information is collected or transmitted while using this feature.</li>
-            </ul>
-        </section>
+            <div class="content-wrapper">
+                <section class="privacy-section">
+                    <h2>1. Information We Collect</h2>
+                    <p>We do not collect, store, or process any personal information from our users.</p>
+                </section>
 
-        <section>
-            <h2>3. Third-Party Services</h2>
-            <p>We do not use any third-party services, including analytics, advertising, or data collection tools, that might gather personal information.</p>
-        </section>
+                <section class="privacy-section">
+                    <h2>2. Permissions</h2>
+                    <p>Our app requires the following permission:</p>
+                    <ul>
+                        <li><strong>Internet:</strong> This permission is used solely to access external resources, such as loading live content from an API. No personal information is collected or transmitted while using this feature.</li>
+                    </ul>
+                </section>
 
-        <section>
-            <h2>4. Data Sharing</h2>
-            <p>We do not share, sell, or disclose any personal data, as we do not collect any personal information in the app.</p>
-        </section>
+                <section class="privacy-section">
+                    <h2>3. Third-Party Services</h2>
+                    <p>We do not use any third-party services, including analytics, advertising, or data collection tools, that might gather personal information.</p>
+                </section>
 
-        <section>
-            <h2>5. Security</h2>
-            <p>We take reasonable measures to protect any data you transmit through our app, but please be aware that no method of transmission over the internet is 100% secure.</p>
-        </section>
+                <section class="privacy-section">
+                    <h2>4. Data Sharing</h2>
+                    <p>We do not share, sell, or disclose any personal data, as we do not collect any personal information in the app.</p>
+                </section>
 
-        <section>
-            <h2>6. Children’s Privacy</h2>
-            <p><strong>Learn English for Kids</strong> is designed for children and is <strong>compatible for all ages</strong>. We do not knowingly collect any personal information from children under 13 years of age. If we learn that we have unintentionally collected personal information from a child under the age of 13, we will take steps to delete that information as soon as possible.</p>
-        </section>
+                <section class="privacy-section">
+                    <h2>5. Security</h2>
+                    <p>We take reasonable measures to protect any data you transmit through our app, but please be aware that no method of transmission over the internet is 100% secure.</p>
+                </section>
 
-        <section>
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of this policy. We encourage you to review this policy periodically for any updates.</p>
-        </section>
+                <section class="privacy-section">
+                    <h2>6. Children’s Privacy</h2>
+                    <p><strong>Learn English for Kids</strong> is designed for children and is <strong>compatible for all ages</strong>. We do not knowingly collect any personal information from children under 13 years of age. If we learn that we have unintentionally collected personal information from a child under the age of 13, we will take steps to delete that information as soon as possible.</p>
+                </section>
 
-        <section>
-            <h2>8. Contact Us</h2>
-            <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
-            <ul>
-                <li><strong>Email:</strong> [Insert Your Contact Email]</li>
-                <li><strong>Website:</strong> [Insert Your Website URL (if applicable)]</li>
-            </ul>
-        </section>
+                <section class="privacy-section">
+                    <h2>7. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of this policy. We encourage you to review this policy periodically for any updates.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>8. Contact Us</h2>
+                    <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
+                    <ul>
+                        <li><strong>Email:</strong> [Insert Your Contact Email]</li>
+                        <li><strong>Website:</strong> [Insert Your Website URL (if applicable)]</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- Chinese Content -->
+        <div id="chineseContent" class="hidden">
+            <h1>隐私政策</h1>
+            <p><strong>最后更新：</strong> <span id="currentDateZH"></span></p>
+
+            <div class="content-wrapper">
+                <section class="privacy-section">
+                    <h2>1. 我们收集的信息</h2>
+                    <p>我们不会收集、存储或处理任何用户的个人信息。</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>2. 权限</h2>
+                    <p>我们的应用程序需要以下权限：</p>
+                    <ul>
+                        <li><strong>互联网：</strong>此权限仅用于访问外部资源，例如从API加载实时内容。在使用此功能时，不会收集或传输任何个人信息。</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>3. 第三方服务</h2>
+                    <p>我们不使用任何第三方服务，包括分析、广告或数据收集工具，这些服务可能会收集个人信息。</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>4. 数据共享</h2>
+                    <p>我们不会共享、出售或披露任何个人数据，因为我们没有在应用中收集任何个人信息。</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>5. 安全性</h2>
+                    <p>我们采取合理措施保护您通过我们的应用程序传输的任何数据，但请注意，互联网上的任何传输方式都不是 100% 安全的。</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>6. 儿童隐私</h2>
+                    <p><strong>Learn English for Kids</strong> 旨在为儿童设计，并且<strong>适用于所有年龄段</strong>。我们不会故意收集来自 13 岁以下儿童的任何个人信息。如果我们发现我们不小心收集了 13 岁以下儿童的个人信息，我们将尽快采取措施删除该信息。</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>7. 隐私政策的更改</h2>
+                    <p>我们可能会不时更新本隐私政策。当我们进行更改时，我们将更新本政策顶部的“最后更新”日期。我们鼓励您定期查看本政策以获取任何更新。</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h2>8. 联系我们</h2>
+                    <p>如果您对本隐私政策有任何问题或疑虑，请通过以下方式联系我们：</p>
+                    <ul>
+                        <li><strong>电子邮件：</strong> [Insert Your Contact Email]</li>
+                        <li><strong>网站：</strong> [Insert Your Website URL (if applicable)]</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Chinese Content -->
-    <div lang="zh">
-        <h1>隐私政策</h1>
-        <p><strong>最后更新：</strong>18/12/2024</p>
+    <footer>
+        <p>&copy; 2024 Learn English for Kids. All rights reserved.</p>
+    </footer>
 
-        <section>
-            <h2>1. 我们收集的信息</h2>
-            <p>我们不会收集、存储或处理任何用户的个人信息。</p>
-        </section>
+    <script>
+        // Function to display today's date
+        function getCurrentDate() {
+            var today = new Date();
+            var day = today.getDate();
+            var month = today.getMonth() + 1; // Months are zero-based
+            var year = today.getFullYear();
+            var formattedDate = year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
+            return formattedDate;
+        }
 
-        <section>
-            <h2>2. 权限</h2>
-            <p>我们的应用程序需要以下权限：</p>
-            <ul>
-                <li><strong>互联网：</strong>此权限仅用于访问外部资源，例如从API加载实时内容。在使用此功能时，不会收集或传输任何个人信息。</li>
-            </ul>
-        </section>
+        // Set today's date in both English and Chinese content
+        document.getElementById("currentDate").textContent = getCurrentDate();
+        document.getElementById("currentDateZH").textContent = getCurrentDate();
 
-        <section>
-            <h2>3. 第三方服务</h2>
-            <p>我们不使用任何第三方服务，包括分析、广告或数据收集工具，这些服务可能会收集个人信息。</p>
-        </section>
-
-        <section>
-            <h2>4. 数据共享</h2>
-            <p>我们不会共享、出售或披露任何个人数据，因为我们没有在应用中收集任何个人信息。</p>
-        </section>
-
-        <section>
-            <h2>5. 安全性</h2>
-            <p>我们采取合理措施保护您通过我们的应用程序传输的任何数据，但请注意，互联网上的任何传输方式都不是 100% 安全的。</p>
-        </section>
-
-        <section>
-            <h2>6. 儿童隐私</h2>
-            <p><strong>Learn English for Kids</strong> 旨在为儿童设计，并且<strong>适用于所有年龄段</strong>。我们不会故意收集来自 13 岁以下儿童的任何个人信息。如果我们发现我们不小心收集了 13 岁以下儿童的个人信息，我们将尽快采取措施删除该信息。</p>
-        </section>
-
-        <section>
-            <h2>7. 隐私政策的更改</h2>
-            <p>我们可能会不时更新本隐私政策。当我们进行更改时，我们将更新本政策顶部的“最后更新”日期。我们鼓励您定期查看本政策以获取任何更新。</p>
-        </section>
-
-        <section>
-            <h2>8. 联系我们</h2>
-            <p>如果您对本隐私政策有任何问题或疑虑，请通过以下方式联系我们：</p>
-            <ul>
-                <li><strong>电子邮件：</strong> [Insert Your Contact Email]</li>
-                <li><strong>网站：</strong> [Insert Your Website URL (if applicable)]</li>
-            </ul>
-        </section>
-    </div>
-
+        // Detect user's language and show the appropriate content
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang.includes("zh")) {
+            document.getElementById("chineseContent").classList.remove("hidden");
+        } else {
+            document.getElementById("englishContent").classList.remove("hidden");
+        }
+    </script>
 </body>
 </html>
