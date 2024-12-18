@@ -56,7 +56,7 @@
         .lang-selector {
             position: fixed;
             top: 20px;
-            right: 20px;
+            left: 20px;
             background: #007bff;
             color: white;
             padding: 10px;
@@ -99,18 +99,28 @@
             list-style: disc;
         }
 
-        .lang-selector select {
-            padding: 8px;
+        .lang-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-buttons button {
+            padding: 8px 15px;
             border-radius: 6px;
             font-size: 16px;
             background: #f7f8fa;
             border: 1px solid #ddd;
             color: #333;
             cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
-        .lang-selector select:focus {
-            outline: none;
+        .lang-buttons button:hover {
+            background-color: #007bff;
+            color: white;
             border-color: #007bff;
         }
 
@@ -133,28 +143,21 @@
                 font-size: 14px;
             }
 
-            .lang-selector {
+            .lang-buttons {
                 position: absolute;
                 top: 10px;
                 right: 10px;
-                background: #007bff;
-                color: white;
-                padding: 8px;
-                border-radius: 6px;
+                gap: 5px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Language Selector (Sticky) -->
-    <div class="lang-selector">
-        <label for="languageSelect" style="margin-right: 10px;">Language: </label>
-        <select id="languageSelect" onchange="changeLanguage()">
-            <option value="auto">Auto Detect</option>
-            <option value="en">English</option>
-            <option value="zh">中文</option>
-        </select>
+    <!-- Language Switcher Buttons -->
+    <div class="lang-buttons">
+        <button id="enBtn" onclick="changeLanguage('en')">English</button>
+        <button id="zhBtn" onclick="changeLanguage('zh')">中文</button>
     </div>
 
     <div class="container">
@@ -290,28 +293,23 @@
         // Detect user's language and show the appropriate content
         var userLang = navigator.language || navigator.userLanguage;
 
-        // Function to switch language based on selection
-        function changeLanguage() {
-            var selectedLang = document.getElementById("languageSelect").value;
-            if (selectedLang === "zh") {
+        // Function to switch language based on button click
+        function changeLanguage(language) {
+            if (language === "zh") {
                 document.getElementById("chineseContent").classList.remove("hidden");
                 document.getElementById("englishContent").classList.add("hidden");
-            } else if (selectedLang === "en") {
+            } else {
                 document.getElementById("englishContent").classList.remove("hidden");
                 document.getElementById("chineseContent").classList.add("hidden");
-            } else {
-                if (userLang.includes("zh")) {
-                    document.getElementById("chineseContent").classList.remove("hidden");
-                    document.getElementById("englishContent").classList.add("hidden");
-                } else {
-                    document.getElementById("englishContent").classList.remove("hidden");
-                    document.getElementById("chineseContent").classList.add("hidden");
-                }
             }
         }
 
         // Initial language selection based on user device language
-        changeLanguage();
+        if (userLang.includes("zh")) {
+            changeLanguage("zh");
+        } else {
+            changeLanguage("en");
+        }
     </script>
 </body>
 </html>
