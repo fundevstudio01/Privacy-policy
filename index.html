@@ -262,3 +262,21 @@
                 document.getElementById("chineseContent").classList.remove("hidden");
                 document.getElementById("englishContent").classList.add("hidden");
             } else if (selectedLang === "en") {
+                document.getElementById("englishContent").classList.remove("hidden");
+                document.getElementById("chineseContent").classList.add("hidden");
+            } else {
+                if (userLang.includes("zh")) {
+                    document.getElementById("chineseContent").classList.remove("hidden");
+                    document.getElementById("englishContent").classList.add("hidden");
+                } else {
+                    document.getElementById("englishContent").classList.remove("hidden");
+                    document.getElementById("chineseContent").classList.add("hidden");
+                }
+            }
+        }
+
+        // Initial language selection based on user device language
+        changeLanguage();
+    </script>
+</body>
+</html>
